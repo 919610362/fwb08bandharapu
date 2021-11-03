@@ -3,10 +3,13 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}. #{title} is #{title} until it is #{title}.
-  // button(type="button", class="btn btn-dark") Press Me for contents
+  button(type="button", class="btn btn-dark") Press Me for contents
 div (id=”happy” onClink=“method()”) Content
 - var btnType = 'info'
 - var btnSize = 'lg’
 button(type='button’ 
-class='btn btn-dark' + btnType + 'btn btn-dark' + btnSize) 
-Button 1
+class='btn btn-dark' + btnType + 'btn btn-dark' + btnSize
+) Button 1
+button(type='button’ 
+class=`btn btn-${btnType} btn-${btnSize}`
+) Button 2
